@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <header id="header">
+    <!-- Logo -->
+    <div class="logo" id="logo">Zur-Administrador</p></div>
+
+    <!-- Botón para mostrar/ocultar el menú en pantallas pequeñas -->
+   
+    <!-- Menú de navegación -->
+    
+</header>
+
+<div class="consultas">
+
+
+
+
+</div>
+
+
+<style>
+
+.subb{
+
+
+
+}
+.consultas{
+
+  width: 40%;
+  height: 500px;
+  margin-top: 1%;
+  margin-left: 1%;
+  border: 1px solid black;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /*  background-color: #000839;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+
+header {
+
+    border-bottom: 1px solid black;
+
+    color: black;
+    padding: 17px;
+    display: flex;
+    
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+
+
+    align-items: center;
+}
+
+/* Logo del header */
+.logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:260%;
+    font-weight: bold;
+    font-family: "Courier Prime", serif;
+}
+.z{
+
+  width:100%;
+height: 220px;  
+margin-right: auto;
+
+}
+.logo:hover{
+
+    cursor: pointer;
+
+}
+
+
+</style>
+
+<script>
+
+     let b = document.querySelector(".b");
+    fetch('https://localhost:8443/VerConsutlas')
+  .then(response => response.json())
+  .then(//data => dtm(data.VerConsutlas)
+
+data => // console.log(data[0].nombre,data[0].apeliido,data[0].numero,data[0].correo,data[0].mensaje)
+
+b.innerHTML +=`<b class="subb">${data[0].nombre},${data[0].apeliido},${data[0].numero},${data[0].correo},${data[0].mensaje}</b>`
+
+  );
+
+</script>
+</body>
+</html>
