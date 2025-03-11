@@ -1,3 +1,41 @@
+let img = document.querySelector(".imgsocial");
+
+let imgmostrar = document.querySelector(".imgmostrar");
+let dvimg = document.querySelector(".dvimg");
+img.addEventListener("click",()=>{
+
+    imgev();
+
+  })
+
+  function imgev(){
+
+    const newImg = document.createElement("img");
+    newImg.src = img.src; // Copiar la imagen
+    newImg.style.width = "100%"; // Tamaño más grande
+
+    imgmostrar.style.display="block";
+    imgmostrar.style.transition="1s ";
+    imgmostrar.style.width="70%";
+    
+    dvimg.style.width="100%";
+
+    dvimg.innerHTML="";
+   
+    dvimg.appendChild(newImg);
+
+  }
+
+  let cerrarIMG = document.querySelector(".cerrarIMG");
+
+  cerrarIMG.addEventListener("click",()=>{
+
+    imgmostrar.style.display="none";
+
+
+  })
+
+
 /*const nombre ="Francisco";
 const apellido="Hernandes";
 const numero="12312313";
