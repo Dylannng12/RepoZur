@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    z-index: 999;
+                                
     /*  background-color: #000839;*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -782,6 +784,7 @@ font-family: "Courier Prime", serif;
  
     position: absolute;
     width: 100%;
+  
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -791,6 +794,7 @@ font-family: "Courier Prime", serif;
 
     width: 50%;
     height: 40px;
+
     background: linear-gradient(to right ,#c63d00 ,#009893);
 
 }
@@ -823,13 +827,17 @@ font-family: "Courier Prime", serif;
   position: absolute;
   z-index: 2;
 }
-.webimgg img{
+.imgwebimgg{
 
 width: 20%;
 margin-left: 5% ;
 
 }
+.imgwebimggcolor{
 
+   display: none;
+
+}
 .imgtxt{
 
     width: 100%;
@@ -854,6 +862,7 @@ margin-left: 5% ;
 .txtwe{
 
 width: 60%;
+
 margin-bottom: 2%;font-family: "Courier Prime", serif;
 
 }
@@ -862,7 +871,7 @@ margin-bottom: 2%;font-family: "Courier Prime", serif;
 
     width: 100%;
     height: 300px;    position: relative;
-    z-index: 1;
+    z-index: ;
  }
  .cir{
 
@@ -894,31 +903,30 @@ margin-bottom: 2%;font-family: "Courier Prime", serif;
 }
 .imgmostrar{
 
-    width: 0%;
-    margin-left: 15%;
-    height: 450px;
-    top: 5%;
-    z-index: 9;     overflow: hidden;
+    width: auto;
+    height: 750px;
+    margin-left: 30%;
+    margin-top: 30%;
+    z-index: 99999999999999999;  
     display: none;
-    transition: width 2s ease-in-out;
-    position: sticky;
+    position: absolute;
 }
 .dvcerrar{
 
-  width: 100%;
+  width: 150%;
   height: 40px;
   display: flex;
+  margin-top: 15%;
   align-items: end;
   justify-content: end;
   font-size:200% ;
-z-index: 1;
+z-index: 777;
   position: absolute;
 
 }
 .dvcerrar b{
 
-    margin-top: 7%;
-    margin-right:1%;
+
     color:white;
 }
 .dvcerrar b:hover{
@@ -926,14 +934,81 @@ z-index: 1;
     cursor: pointer;
 
 }
-.dvimg{
+.dvenrm{
 
-   width: 0%;
-   height: 100%;
-   background-color: #009893;  overflow: hidden;
+   position: absolute;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.8); 
+backdrop-filter: blur(10px); 
+   z-index: 5;
+   display: none;
+   
+   height: 870%;
+   margin-top: -250%;
+
+
+}
+.dvimg{
+    width: 100%;
+   height: 150%;
+
+   opacity: 1;
+   display: flex;
+   z-index: 1;
+
+   align-items: center;
+   justify-content: center;overflow: hidden;
    transition: width 2s ease-in-out;
 }
 
+.dvimgmas{
+
+   width: 100%;
+   height: 60px;
+   display: flex;
+   align-items: center;
+   margin-top: 0.9%;
+   justify-content: center;
+   gap: 5px;
+
+
+}
+.dvitemm{
+
+   width: 30%;
+   height: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 10px;
+  
+
+}
+.itemimg{
+  
+  width: 50%;
+  height: 65px;
+  background-color:blanchedalmond;
+ 
+}
+.itemimg img{
+
+   width: 100%;
+   height: 100%;
+
+}
+.dvimgcost{
+   width: 100%;
+   height: auto;
+   display: flex;
+   margin-top: -35%;
+   z-index: 8;
+   
+   align-items: center;
+   justify-content: center;
+
+}
 .portfolio{
 
     width: 100%;
@@ -1229,10 +1304,15 @@ z-index: 1;
 
     width: 45%;
     height:200px;
-    border-radius: 20px;
+    border-radius: 25px;
     z-index: 5;
     position: relative;
     border: 1px solid black;
+}
+.sociall img{
+
+   border-radius: 27px;
+
 }
 .imgsocial{
 
@@ -1828,6 +1908,7 @@ width: 100%;
 .zxz1{
     
     margin-top: 7%;
+
     width: 70%;
 
 }
@@ -1935,6 +2016,7 @@ margin-right: 15%;
   
     margin-top: 60%;
     width: 50%;
+    background: linear-gradient(to left ,#009893,#c63d00 );
  
  }
 
@@ -1943,6 +2025,7 @@ margin-right: 15%;
    margin-top: 65%;
    width: 65%;
    height: 20px;
+   background: linear-gradient(to left ,#009893,#c63d00 );
 }
 
 .IDvisuales{
@@ -1955,11 +2038,33 @@ margin-right: 15%;
 
 .paginasweb{
 
-    margin-top: 245%;
+ margin-top: 75%;
+ display: flex;
+ height: auto;
+ flex-direction: columns;
   
 
 
 }
+.ovrlcuaa{
+
+   margin-top: -32%;
+
+}
+.cuadr1{
+
+ width: 60%;
+ margin-top: 10%;
+ height: 20px;
+ background: linear-gradient(to right ,#009893,#c63d00 );
+}
+.cuadr2{
+
+ width: 40%;
+ height: 15px;
+ background: linear-gradient(to right ,#009893,#c63d00 );
+}
+
 .tituloID{
 
     width: 100%;
@@ -2020,6 +2125,10 @@ width: 100%;
 .percolor{
 
    display:block;
+   width: 30%;
+   height:40%;
+   margin-top: 5%;
+   margin-left: 5%;
    
 }
 
@@ -2054,318 +2163,260 @@ width: 100%;
    text-decoration: none;
 
 }
+.txtwe{
+
+     width: 100%;
+     font-size: 120%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 2;
+
+}
+.txtwe p{
+   width: 80%;
+   font-size: 100%;
+   margin-left: 20%;
+   margin-top: 5%;
+
+}
+
+.imgweb{
+
+position: absolute;
+
+}
+.titweb{
+
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.titweb b{
+
+    z-index: 4;
+    font-size:180%;
+}
 
 
 
 
+.cont{
+
+   margin-top: 5%;
+   z-index: 1;
+
+}
+.cir{
+
+    background: linear-gradient(to left ,#009893,#c63d00 );
+
+}
+.cir.cir:nth-child(1){
+
+  width: 130px;
+  height: 130px;
+  left: -6%;
+}
+
+.cir.cir:nth-child(2){
+
+    width: 110px;
+    height: 110px;
+    top: 25%;
+
+  }  
+
+  .cir.cir:nth-child(3){
+
+    width: 90px;
+    height: 90px;
+    top: 45%;
+  
+  }
+.webimgg{
+
+   margin-left: 150%;
+
+   top: 40%;
+
+}
+
+
+  .portfolio{
+
+    margin-top: 45%;
+
+  }
+  .imgwebimgg{
+ 
+    display: none;
+
+  }
+.imgwebimggcolor{
+
+   display: block;
+   width: 80%;
+   margin-bottom: 10%;
+
+}
+.portovrly{
+
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ align-items: center;
+   
+}
+.portoverly{
+
+    display: flex;
+ flex-direction: column;
+
+}
+.tblogos{
+
+ width: 100%;
+ height: auto;
+
+}
+.logos{
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.primlogos{
+  
+    width: 100%;
+    margin: 0%;
+     
+}
+.logoo{
+
+   width: 40%;
+   margin: 0%;
+}
+.btnmas{
+
+   width: 85%;
+   height: 50px;
+   margin-left:8%;
+   
+}
+.tbsocialm{
+
+    width: 100%;
+ height: auto;
+ align-items: center;
+ justify-content: center;
+ margin-top: 3%;
+
+}
+.social{
+
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialles{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
+}
+.sociall{
+
+    width: 40%;
+    margin: 0%;
+
+}
+.sociall img{
+
+   border-radius: 20px;
+
+}
+.imgmostrar{
+
+    width: 90%;
+   margin: 0;
+   height: auto;
+    margin-top: 20%;
+    z-index: 9999999999;    
+    display: none;
+    background-color: #8c2a00;
+    position: absolute;
+    transition: width 2s ease-in-out;
+}
+
+
+
+.dvimgcost{
+  
+    flex-direction: column;
+    gap: 10%;
+    width: 100%;
+
+}
+
+
+.dvimg{
+
+    height: auto; 
+    display: flex;
+    margin-top: 0%;
+    align-items:center;
+    justify-content: center;
+    margin-right: 5%;
+    
+ 
+}
+.dvimg img{
+
+   margin: 0%;   
+
+}
+
+.dvitemm{
+
+   width: 100%;
+   display: flex;
+   flex-direction:row;
+   height: 40px;
+   align-items: center;
+   justify-content: center;
+
+   margin-right: 5%;
+}
+
+.dvenrm{
+
+   margin-top: -550%;
+   height: 600%;
+ 
+}
+.dvcerrar{
+
+    width: 100%;
+       
+
+}
+.itemimg{
+
+   width: 20%;
+
+     
+}
 
 }
   
-  
-  /*  .sectprin{
-
-        
-
-    }
-    .btndv{
-  
-        width: 70%;
-
-    }
-      #bgsga{ 
-  
-        width: 350px;
-
-
-    }
-     .pddsdiv{
-
-         width: 0%;
-         opacity: 0;
-
-     }
-     .sectiom{
-        position: relative;
-
-     }
-     .sectprin{
-        position: relative;
-        
-
-        
-     }
-     .txtprim{
-        top: -7%; 
-        margin-left: 10%;
-        width: 120%;
-        position: absolute;
-        z-index: 10;
-
-
-     }
-     .txtprim h1{
-
-        font-size: 135%;
-      
-
-    }
-    .txtseg{
-
-        margin-top: 16%;
-        margin-left: 10%;
-        font-size: 110%;
-
-    }
-     .dvsegrect{
-
-      height: 700px;
-      display: flex;
-      position: relative;
-      
-      width: 20%;
-    
-      
-
-     }
-     .segrect{
-      
-     margin-top: auto;
-     height: 300px;
-     width: 190%;
-     position: absolute;
- 
-     z-index: 10;
-     margin-top: 320%;
-     left: -20%;
-     }
-     .dvrect{
-
-       width: 100%;
-       margin-top: 20%;
-     }
-     .dvrects{
-  
-        width: 100%;
-        height: 140px;
-        margin-top: 8%;
-     }
-     .dvbtn{
-        width: 100%;
-     }
-     .dvbtnrf{
-
-        display: flex;
-        flex-direction: column;
-        position: relative;
-         
-     }
-     .btndv{
-    
-     margin-right:10%;
-     width: auto;
-     height:auto
-
-     }
-     #bgsga{
- 
-        width:150px;   
-        height: 45px;   
-           
-     }
-  .servicios{
-   
-      border-top: 2px solid black;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      position: absolute;
-        z-index: 10;
-      gap: 0px;
-
-      }
-
-     .left{
-       margin-top: 5%;
-        width: 100%;
-        height: 200px;
-        gap: 0px;
-        align-items: center;
-     }
-     .txt1 b{
-
-    font-size: 350%;
-         
-
-     }
-     .right{
-
-        margin-top: 5%; 
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-     }
-     .IDV{
-        
-        width: 95%;
-        margin-left:10%;
-
-     }
-     .txtS p{
-
-       margin-right:5%;
-
-     }
-     .txt1{
-
-     font-size: 50%;
-
-     }
-     .portafolio{
- 
-        margin-top: 250%;
-  
-
-     }
-     .dvheaderB b{
-  
-         font-size: 200%;
-
-     }
-     .dvheaderB p{
-
-         font-size: 80%;
-
-     }
-     .dvproyects{
-
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-     }
-     .dvlggg{
-
-         width: 100%;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-
-     }
-     .dvlggg b{
-
-        margin: 0%;
-        font-size: 230%;
-        font-family: "Courier Prime", serif;
-
-     }
-     .dvport2{
-
-       width: 100%;
-         
-
-     }
-     .dvpdport{
-
-          width: 100%;
-
-     }
-     
-     .dvLogos{
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-
-     }
-
-
-     .contacto{
-
-           margin-top: 200%;
-           width: 90%;
-
-     }
-
- 
-     .dvmedias{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;          
-     }
-     .btnmass{
-   
-        width: 80%;
-        height: 55px;
-        display: flex;
-        align-items: center;
-        justify-content: ;
-        background: linear-gradient(to bottom,white,white,gray);
-
-   
-     }
-     .btnmass b{
-   
-        font-size: 80%;
-        
-     }
-     .btnmas{
-
-       width: 80%;
-       height: 55px;
-    
-
-     }
-     .btnmas b{
-
-        font-size: 80%;
-
-     }
-     .cnta{
-
-      display: flex;
-      flex-direction: column;
-
-     }
-     .cntb{
-
-      display: flex;
-      flex-direction: column;
-
-     }
-     .cntc{
-
-        border-top:2px solid black ;
-        display: flex;
-        width: auto;
-
-     }
-     .form{
-
-        display: flex;
-        border: none;
-        flex-direction: column;
-
-     }
-     .NA{
-
-        display: flex;
-        
-
-     }
-     .corelce{
-
-        display: flex;
-
-     }
-     .nm{
-
-       display: flex;
-
-     }
-     
- }
