@@ -9,13 +9,23 @@ itemimg.forEach((item)=>{
    item.addEventListener("click",()=>{
 
     const newImg = document.createElement("img");
+
+     if(window.innerWidth>=1100){
+
       dvimg.style.width="100%"
     newImg.src= item.src; 
     newImg.style.width = "100%"; // Tamaño más grande
     newImg.style.maxHeight="550px";
-    dvenrm.style.display="block";   
+  
+     }else if(window.innerWidth<=1000){
 
-    
+     newImg.src= item.src; 
+    newImg.style.width = "100%"; // Tamaño más grande
+    newImg.style.maxHeight="550px";
+     
+
+     }
+      dvenrm.style.display="block";   
     dvimg.innerHTML="";
    
     dvimg.appendChild(newImg);
@@ -65,19 +75,20 @@ const dvenrm = document.querySelector(".dvenrm");
     }else if(window.innerWidth<1000){
       
 
-  window.location.href="ZurInicio-1.html#dvimg";
+  window.location.href="ZurInicio-1.html#imgmost";
 
       const newImg = document.createElement("img");
       dvimg.style.width="80%"
       newImg.src = img.src; // Copiar la imagen
     newImg.style.width = "90%"; // Tamaño más grande
     newImg.style.height="auto";
-    
-
-
+ 
     dvimg.innerHTML="";
    
   dvimg.appendChild(newImg);
+  
+      imgmostrar.style.marginTop="40%";
+
       console.log("entro al else");
 
     }
@@ -111,7 +122,12 @@ const dvenrm = document.querySelector(".dvenrm");
 
   })
 
-
+  document.querySelectorAll('*').forEach(el => {
+    if (el.scrollWidth > document.documentElement.clientWidth) {
+      console.log('Este elemento se está desbordando:', el);
+    }
+  });
+  
 /*const nombre ="Francisco";
 const apellido="Hernandes";
 const numero="12312313";
