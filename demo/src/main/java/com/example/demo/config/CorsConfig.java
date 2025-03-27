@@ -13,7 +13,7 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/Zur/consultasEntrante") // Permite todas las rutas
+                registry.addMapping("/Zur/consultasEntrante")
                         .allowedOrigins("http://127.0.0.1:5500") // Permite este origen
                         .allowedMethods("POST") // Métodos permitidos
                         .allowedHeaders("*") // Permite todos los headers

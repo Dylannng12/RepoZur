@@ -121,12 +121,6 @@ const dvenrm = document.querySelector(".dvenrm");
   
 
   })
-
-  document.querySelectorAll('*').forEach(el => {
-    if (el.scrollWidth > document.documentElement.clientWidth) {
-      console.log('Este elemento se está desbordando:', el);
-    }
-  });
   
 /*const nombre ="Francisco";
 const apellido="Hernandes";

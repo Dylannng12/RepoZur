@@ -3,111 +3,659 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <header id="header">
     <!-- Logo -->
-    <div class="logo" id="logo">Zur-Administrador</p></div>
+    <div class="logo" id="logo"><img src="zur.png" alt="" class="z"></p></div>
 
     <!-- Botón para mostrar/ocultar el menú en pantallas pequeñas -->
    
     <!-- Menú de navegación -->
+    <nav id="nav-menu">
+     <a href="Inicio.html" class="nav_a">Inicio</a>
+     <a  href="servicios.html" class="nav_a">
+         Servicios</a>
+     <a href="cotizacion.html" class="nav_a">
+         Portafolio</a>
+     <a href="#contact" onclick="redirigircponsulta()" class="nav_a">
+         Contacto</a>
+    </nav>
+    <div class="divbtns"><button class="menu-toggle"  id="btnMenu" onclick="toggleMenu()">☰</button>
     
+         <div class="dvheadermobile">
+
+            <div class="dvcerrar">
+
+                  <b style="color: white;">X</b>
+                 
+            </div>
+
+           
+                  
+
+
+         </div>
+      
+    </div>
+     <div class="pddsdiv">
+
+          <button>PEDÍ TU DISEÑO</button>
+
+     </div>
 </header>
 
-<div class="consultas">
+<div class="section">
+
+     <div class="consultas">
+ 
+          <div class="txtC">
+
+                  <b>Consultas de Clientes</b>
+
+                    <div class="vorl1"></div>
+                    <div class="vorl2"></div>
+
+
+          </div>
+            <div class="dvconsultas">
+
+                      <div class="consulta">
+
+                            <div class="headr">
+
+                                 <p>Consulta de: Garcia Dylan</p>
+
+                                 <b class="Ver">Ver</b>
+                                 <b class="cerrar"  style="display: none"  >Cerrar</b>
+
+                            </div>
+
+                              <div class="dvcon">
+
+                                   <div class="gmtel">
+
+                                                 <b>Correo:dylan123@gmail.com</b>
+                                                 <b>Celular:1122334455</b>
+                                            
+                                   </div>
+
+                                   <div class="consultaM">
+
+                                        <b>Mensaje:</b>
+
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam cupiditate laudantium repellendus, maxime tempore eligendi sed quae neque fugiat distinctio non dolorem perferendis repellat optio cum quo a eaque.</p>
+ 
+   
+
+                                   </div>
+
+                      </div>
+   
+                    </div>
+
+
+                    <div class="consulta">
+
+                      <div class="headr">
+
+                           <p>Consulta de: Garcia Dylan</p>
+
+                           <b class="Ver">Ver</b>
+                           <b class="cerrar"  style="display: none"  >Cerrar</b>
+
+                      </div>
+
+                        <div class="dvcon">
+
+                             <div class="gmtel">
+
+                                           <b>Correo:dylan123@gmail.com</b>
+                                           <b>Celular:1122334455</b>
+                                      
+                             </div>
+
+                             <div class="consultaM">
+
+                                  <b>Mensaje:</b>
+
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam cupiditate laudantium repellendus, maxime tempore eligendi sed quae neque fugiat distinctio non dolorem perferendis repellat optio cum quo a eaque.</p>
 
 
 
+                             </div>
+
+                </div>
+
+              </div>
+
+              <div class="consulta">
+
+                <div class="headr">
+
+                     <p>Consulta de: Garcia Dylan</p>
+
+                     <b class="Ver">Ver</b>
+                     <b class="cerrar"  style="display: none"  >Cerrar</b>
+
+                </div>
+
+                  <div class="dvcon">
+
+                       <div class="gmtel">
+
+                                     <b>Correo:dylan123@gmail.com</b>
+                                     <b>Celular:1122334455</b>
+                                
+                       </div>
+
+                       <div class="consultaM">
+
+                            <b>Mensaje:</b>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere numquam cupiditate laudantium repellendus, maxime tempore eligendi sed quae neque fugiat distinctio non dolorem perferendis repellat optio cum quo a eaque.</p>
+
+
+
+                       </div>
+
+          </div>
+
+        </div>
+
+
+                    
+
+
+            </div>
+       
+     </div>
+     <Script>
+
+        
+ 
+         let dvcon = document.querySelector(".dvcon");
+         let Ver = document.querySelectorAll(".Ver");
+         let consulta = document.querySelectorAll(".consulta");
+         let cerrar =document.querySelectorAll(".cerrar")
+
+         let dvprueba = document.querySelector(".dvprueba");
+
+         Ver.forEach(element => {
+             element .addEventListener("click",(e)=>{
+    
+             const cons = element.parentElement.parentElement;
+
+             const con = element.parentElement;
+
+
+             cons.style.transition= "height 2s"; 
+
+            cons.childNodes[3].style.display="block";
+
+                   element.style.display="none";
+
+                   con.childNodes[5].style.display="block";
+
+                   cons.style.height="300px";
+            
+         })      });
+
+
+         cerrar.forEach(ele =>{
+
+          ele.addEventListener("click",(e)=>{
+          
+          const conss = ele.parentElement.parentElement;
+
+          const co = ele.parentElement;
+
+          conss.style.transition= "height 2s"; 
+
+          ele.style.display="none";
+
+          co.childNodes[3].style.display="block";
+
+          conss.style.height="60px";               
+          
+         })
+
+         })
+      
+     </Script>
+
+
+<div class="PD">
+ 
+ 
+  <div class="container">
+      <div class="circle" id="circle1">
+
+           <div class="dv1">
+
+              
+
+           </div>
+
+           <div class="dv11">
+
+
+
+           </div>
+
+
+      </div>
+      <div class="circle" id="circle2">
+
+           <div class="dv2">
+
+
+
+           </div>
+
+
+      </div>
+      <div class="circle" id="circle3">
+
+         <div class="piso">
+
+
+
+         </div>
+
+         <div class="zdemierda">
+
+          
+         </div>
+
+
+      </div>
+
+  </div>
+
+
+</div>
 
 </div>
 
 
 <style>
 
-.subb{
-
-
-
-}
-.consultas{
-
-  width: 40%;
-  height: 500px;
-  margin-top: 1%;
-  margin-left: 1%;
-  border: 1px solid black;
-
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-
-    /*  background-color: #000839;*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-sizing: border-box;
-}
-
-
 header {
 
-    border-bottom: 1px solid black;
+border-bottom: 1px solid black;
 
-    color: black;
-    padding: 17px;
-    display: flex;
-    
-    height: 50px;
-    align-items: center;
-    justify-content: center;
+color: black;
+padding: 17px;
+display: flex;
+
+height: 50px;
+align-items: start;
+justify-content: space-between;
 
 
-    align-items: center;
+align-items: center;
 }
 
 /* Logo del header */
 .logo {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size:260%;
-    font-weight: bold;
-    font-family: "Courier Prime", serif;
+width: 100%;
+display: flex;
+align-items: center;
+
+font-size:260%;
+font-weight: bold;
+font-family: "Courier Prime", serif;
 }
 .z{
 
-  width:100%;
+width:50%;
 height: 220px;  
 margin-right: auto;
 
 }
 .logo:hover{
 
+cursor: pointer;
+
+}
+/* Estilo del menú de navegación                b    */
+#nav-menu {
+display: flex;
+width: 100%;
+gap: 40px;
+transition: max-height 0.4s ease, opacity 0.4s ease;
+
+}
+
+.nav_a{
+text-decoration: none;
+color: black;
+display: flex;
+font-family: "Courier Prime", serif;
+font-size: 140%;
+transition: color 0.3s ease;
+}
+
+.nav_a :hover {
+/*border-bottom: 3px solid blue;*/
+color:blue;
+cursor: pointer;
+
+}
+.btnc{
+width:0%;
+opacity: 0;
+
+}
+.dvheadermobile{
+
+display:none;
+
+}
+.X{
+width: 70%;
+height: 50px;
+cursor: pointer;
+background-color:transparent;
+color: white;
+font-size: 20px;
+opacity: 0;
+
+}
+
+.menu-toggle {
+    display: none;
+    background-color:transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
     cursor: pointer;
+    
+}
+.pddsdiv{
+
+  width: 40%;
+
+}
+.pddsdiv button{
+
+    width: 70%;
+    height: 40px;
+    margin-left: 10%;
+    border: none;
+    background: linear-gradient(to right ,#009893,#c63d00);
+    color: white;
+    border-radius: 10px;
+
+}
+
+.section{
+
+   width: 100%;
+   display: flex;
+
+}
+
+.consultas{
+
+   width: 50%;
+ 
+
+}
+.txtC{
+ 
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+}
+.txtC b{
+
+   position: absolute;
+   font-size: 270%;
+  margin-top: -0.5%;
+   font-family: "Courier Prime", serif;
+   margin-left: 5%;
+
+}
+.vorl1{
+
+   width: 55%;
+   height: 10px;
+   background: linear-gradient(to right ,#009893,#c63d00);
+
+}
+.vorl2{
+
+width: 65%;
+height: 30px;
+background: linear-gradient(to right ,#009893,#c63d00);
+
+}
+
+.dvconsultas{
+
+   width: 100%;
+   margin:5%;
+   display: flex;
+   gap: 10px;
+   flex-direction: column;
+   height: auto;
+}
+.consulta{
+
+   width: 100%;
+   height: 60px;
+  
+   border-radius: 20px;
+   background: linear-gradient(to bottom ,#009893,#c63d00);
+
+}
+.consultaM{
+
+  margin-left: 5%;
+  margin-top: 6%;
+  color: white;
+
+}
+
+.dvcon{
+
+   display: none;
+
+}
+.gmtel{
+
+  width: 100%;
+  display: flex;
+  gap: 80px;
+  border-radius: 10px;
+  color: white;
+  font-family: "Courier Prime", serif;
+  font-size: 100%;
+}
+.gmtel b{
+
+   margin-left: 2%;
+
+}
+
+.headr{
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  border-radius: 10px;
+  color: white;
+  font-family: "Courier Prime", serif;
+  font-size: 120%;
+}
+.headr p{
+
+   width: 80%;
+   margin-left: 2%;
+
+}
+.headr b{
+
+   margin-left: 8%;
+
+}
+.headr b:hover{
+
+  cursor: pointer;
+
+}
+
+
+
+
+.PD{
+
+width: 50%;
+max-height: 550px;
+margin-left: 20%;
+margin-top: 2%;
+overflow: ;
+
+
+
+}
+
+.container2 {
+position: relative;
+height: 350px;
+width: auto; /* Solo un pequeño margen para contener los círculos */
+}
+.circle2 {
+background: linear-gradient(to bottom ,#009893,#c63d00);
+border-radius: 50%;
+position: absolute;
+
+
+}
+.container {
+position: sticky;
+height: 100vh;
+display: flex;
+
+align-items: centers;
+width: auto; /* Solo un pequeño margen para contener los círculos */
+}
+
+.circle {
+background: linear-gradient(to bottom ,#009893,#c63d00);
+
+border-radius: 50%;
+position: absolute;
+
+}
+
+.circle:nth-child(1) { top: 0%;
+
+left: 20%;
+z-index: 5;
+width:230px ;
+overflow:visible;
+display: flex;
+align-items: center;
+height: 230px;
+
+}
+.circle:nth-child(2) { top: 15%;
+
+left: 20%;
+z-index: 4;
+width:300px ;
+height: 300px;
+
+
+}
+
+.circle:nth-child(3) { top: 35%;
+
+left: 13%;
+
+}
+.dv1{
+
+width: 120%;
+position: absolute;
+height: 30px;
+background-color: white;
+
+
+}
+.dv11{
+width: 12%;
+z-index: 1;
+height: 85px;
+margin-top: 24%;
+top: 30%;
+background-color: white;
+border-radius: 0px 0px 10px 10px;
+}
+
+
+#circle3{
+
+width:400px ;
+height: 400px;
+
+}
+.dv2{
+
+width: 150%;
+height: 30px;
+background-color: white;
+position: absolute; 
+top: 65%;
+left: -40%;
+transform: rotate(-45deg);
+z-index: 6;
+}
+
+.piso{
+
+ width: 100%;
+ height: 30px;
+ background-color: white;
+ position: absolute;
+ 
+ top: 57%;  
+}
+.zdemierda{  
+
+position: absolute;
+width: 10%;
+height: 35px;
+background-color: white;
+top: 40%;
+border-radius: 20px 20px 0px 0px;
+left: 86%;
 
 }
 
 
 </style>
-
-<script>
-
-     let b = document.querySelector(".b");
-    fetch('https://localhost:8443/VerConsutlas')
-  .then(response => response.json())
-  .then(//data => dtm(data.VerConsutlas)
-
-data => // console.log(data[0].nombre,data[0].apeliido,data[0].numero,data[0].correo,data[0].mensaje)
-
-b.innerHTML +=`<b class="subb">${data[0].nombre},${data[0].apeliido},${data[0].numero},${data[0].correo},${data[0].mensaje}</b>`
-
-  );
-
-</script>
 </body>
 </html>

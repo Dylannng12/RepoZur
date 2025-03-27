@@ -48,16 +48,13 @@ public class SecurityConfig {
                 .httpBasic(Customizer.withDefaults())
                 .authorizeHttpRequests(
                         authorizeRequest -> authorizeRequest
-                                //.requestMatchers("/Zur/administrador").hasAuthority("Administrador")
-                                .requestMatchers("/adm").hasAuthority("Administrador")// .requestMatchers("/VerConsutlas").hasAuthority("Administrador")
+
+                                .requestMatchers("/adm").hasAuthority("Administrador")
                                  .requestMatchers("/VerConsutlas").hasAuthority("Administrador")
-                                //.requestMatchers("/test/admin").hasAuthority("admin")
-                                //.requestMatchers("/Zur/consultasEntrante").permitAll()
                                 .anyRequest().permitAll()
 
                 )
-                /*.csrf(csrf -> csrf.ignoringRequestMatchers("/consultasEntrante")) // Ignorar CSRF
-                .httpBasic(Customizer.withDefaults())*/
+
                 .formLogin(Customizer.withDefaults());
 
         return httpSecurity.build();
