@@ -24,12 +24,10 @@
 
 
     <header id="header">
-        <!-- Logo -->
-        <div class="logo" id="logo"><img src="img/zur.png" alt="" class="z"></p></div>
     
-        <!-- Botón para mostrar/ocultar el menú en pantallas pequeñas -->
-       
-        <!-- Menú de navegación -->
+        <div class="logo" id="logo"><img src="img/zur.png" alt="" class="z"></p></div>
+
+    
         <nav id="nav-menu">
          <a href="Inicio.html" class="nav_a">Inicio</a>
          <a  href="servicios.html" class="nav_a">
@@ -39,15 +37,21 @@
          <a href="#contact" onclick="redirigircponsulta()" class="nav_a">
              Contacto</a>
         </nav>
-        <div class="divbtns"><button class="menu-toggle"  id="btnMenu" onclick="toggleMenu()">☰</button>
+        <div class="divbtns"><div class="menu-toggle"  id="btnMenu" onclick=""><div class="dvfil"></div>
+        <div class="dvfil"></div>    
+        <div class="dvl1l">
+            <div class="ln1" id="ln1"></div>
+            <div class="ln1" id="ln2"></div>
+            <div class="ln1" id="ln3"></div>
+           </div></div>
         
              <div class="dvheadermobile">
 
-                <div class="dvcerrar">
+                <!-- <div class="dvcerrar">
 
                       <b style="color: white;">X</b>
                      
-                </div>
+                </div>-->
 
                 <nav id="nav">
                     <a href="Inicio.html" class="nv_a">Inicio</a>
@@ -603,8 +607,8 @@
                                                  </div>
                                                  <div class="inputs">
 
-                                          <input type="text">
-                                          <input type="text">
+                                          <input type="text" id="nombre">
+                                          <input type="text" id="apellido">
 
                                                  </div>
 
@@ -623,8 +627,8 @@
                                             </div>
                                             <div class="inputs">
 
-                                                <input type="text">
-                                                <input type="text">
+                                                <input type="text" id="celu">
+                                                <input type="text" id="correo">
       
 
                                             </div>
@@ -640,7 +644,9 @@
 
                            <b>Mensaje</b>
                              
-                           <input type="text" class="msjform">
+                           <input type="text" class="msjform" id="msjform">
+
+                           <input type="submit" class="btnmandar">
 
                            </div>
 
@@ -703,12 +709,8 @@
                   <div class="ricbbb" id=""></div>
                 </div>
               
-          </div> 
-
- 
-                 
+          </div>                  
             </div>
-
        
 <script src="ZurJS.js"></script>
 </body>

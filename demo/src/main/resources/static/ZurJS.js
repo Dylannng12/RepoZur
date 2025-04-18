@@ -121,27 +121,93 @@ const dvenrm = document.querySelector(".dvenrm");
   
 
   })
+  let dvll = document.querySelector(".dvl1l");
+let ln1= document.getElementById("ln1");
+let ln2= document.getElementById("ln2");
+let ln3= document.getElementById("ln3");
+let dvfil= document.querySelector(".dvfil");
+
+let dvheadermobile = document.querySelector(".dvheadermobile");
+dvfil.addEventListener("click",()=>{
+
+    console.log("Entro")
+
+    ln1.style.transition= "transform 0.5s"; 
+
+    ln1.style.transform="rotate(0deg)";
+
+    ln3.style.transform="rotate(0deg)";
+
+    ln2.style.display="block";
+
+    dvfil.style.display="none";
+
+    dvll.style.gap="5px";
+
+
+        dvheadermobile.style.transition="height 1s ease"
+
+        dvheadermobile.style.height="0px";
+     
+
   
-/*const nombre ="Francisco";
-const apellido="Hernandes";
-const numero="12312313";
-const correo="fran@Gmail.com"
-const mensaje="a"
 
 
-fetch("https://localhost:8443/Zur/consultasEntrante", {
+})
+
+    dvll.addEventListener("click",()=>{
+
+      dvll.style.gap="0px";
+
+        ln1.style.transition= "transform 0.5s"; 
+    
+        ln1.style.transform="rotate(45deg)";
+    
+        ln2.style.display="none";
+    
+        ln3.style.transition= "transform 0.5s"; 
+        
+        ln3.style.transform="rotate(-45deg)";
+    
+    
+        dvfil.style.display="block";
+
+        dvheadermobile.style.opacity="1";
+
+        dvheadermobile.style.transition="height 1s ease"
+
+        dvheadermobile.style.height="600px";
+
+
+    });
+
+
+
+
+
+const nombre = document.getElementById("nombre");
+const apellido=document.getElementById("apellido");
+const numero= document.getElementById("celu");
+const correo=document.getElementById("correo");
+const mensaje=document.getElementById("msjform");
+
+const btnmandar = document.querySelector(".btnmandar").addEventListener("click",()=>{
+
+  fetch("https://localhost:8443/Zur/consultasEntrante", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
     },
     body: JSON.stringify({
-        nombre: "Candela",
-        apeliido:"Cohen",
-        numero: "12322312",
-        correo: "Candela@Gmail.com",
-        mensaje: "Hola, quiero hacer una consulta."
+        nombre: nombre.value(),
+        apeliido:apellido.value(),
+        numero: numero.value(),
+        correo: correo.value(),
+        mensaje: mensaje.value()
     }),
      mode: "cors"
 })
-.then(response => response.json())  // Convertir la respuesta a JSON
-.catch(error => console.error("Error:", error));*/
+.catch(error => console.error("Error:", error));
+});
+
+

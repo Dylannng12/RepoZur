@@ -72,7 +72,7 @@
 
 
           </div>
-            <div class="dvconsultas">
+            <div class="dvconsultas" >
 
                       
             </div>
@@ -113,7 +113,7 @@ try{
 
 for(i=0;i<e.length;i++){
 
-dvconsultas.insertAdjacentHTML('beforeend', `<div class="consulta""><div class='headr'><p>Consulta de:${e[i].nombre+" "}${e[i].apeliido+" "}</p><b class="Ver">Ver</b><b class='cerrar'style='display: none'>Cerrar</b></div><div class='dvcon'><div class='gmtel'><b>${e[i].correo}</b><b>Celular:${e[i].numero}</b></div><div class='consultaM'><b>Mensaje:${e[i].mensaje}</b><p></p></div></div>`
+dvconsultas.insertAdjacentHTML('beforeend', `<div class="consulta"><div class='headr'><p>Consulta de:${e[i].nombre+" "}${e[i].apeliido+" "}</p><b class="Ver" onclick="agg(this)" >Ver</b><b class='cerrar' onclick="egg(this)" >Cerrar</b></div><div class='dvcon'><div class='gmtel'><b>${e[i].correo}</b><b>Celular:${e[i].numero}</b></div><div class='consultaM'><b>Mensaje:${e[i].mensaje}</b><p></p></div></div>`
 )
 }
 
@@ -125,65 +125,52 @@ console.log("Error en try de ljson");
 }
 ljson();
 
-   //function rcver(element){
+function agg(e){
 
-      let  Ver=document.querySelectorAll(".Ver");
+   let cons = e.parentElement.parentElement;
 
-         Ver.forEach(element => {
-          
-            console.log("Recorre los VER")
-           
-             element .addEventListener("click",(e)=>{
-    
-               console.log("Entro al eventlistener de VER")
+   cons.style.transition="height 1s";
 
-             const cons = element.parentElement.parentElement;
-
-             console.log(cons);
-
-             const con = element.parentElement;
+   cons.style.height="250px";
 
 
-             cons.style.transition= "height 2s"; 
+   let dvcon = cons.childNodes[1];
 
-            console.log(cons.childNodes[0]);
+   dvcon.style.display="block";
 
-            cons.childNodes[3].style.display="block";
+   e.style.display="none";
 
-                   element.style.display="none";
+   let dvhr = cons.childNodes[0];
 
-                   //con.childNodes[5].style.display="block";
+    let cer = dvhr.childNodes[2];
 
-                   cons.style.height="300px";
-            
-               
-             })})
-         
-         cerrar.forEach(ele =>{
+    cer.style.display="block";
 
-         console.log("Entro al crr");
+}
 
-          ele.addEventListener("click",(e)=>{
-          
-          const conss = ele.parentElement.parentElement;
+function egg(a){
 
-          const co = ele.parentElement;
+let conss = a.parentElement.parentElement;
 
-          conss.style.transition= "height 2s"; 
+conss.style.transition="height 1s";
 
-          ele.style.display="none";
+conss.style.height="60px";
 
-          co.childNodes[3].style.display="block";
+let dvconn = conss.childNodes[1];
 
-          conss.style.height="60px";               
+dvconn.style.display="none";
 
-        }
+a.style.display="none";
 
+let dvhr = conss.childNodes[0];
 
+ let cer = dvhr.childNodes[1];
 
+ cer.style.display="block";
 
-      )
-     })
+}
+
+  
     
         //});
       
@@ -258,7 +245,6 @@ height: 50px;
 align-items: start;
 justify-content: space-between;
 
-
 align-items: center;
 }
 
@@ -282,6 +268,11 @@ margin-right: auto;
 .logo:hover{
 
 cursor: pointer;
+
+}
+.cerrar{
+
+   display: none;
 
 }
 
