@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-@CrossOrigin(origins = "https://repozur.up.railway.appgit")
+@CrossOrigin(origins = "https://zurgraphic.com")
 @RestController
 @RequestMapping("/Zur")
 public class controllers {
