@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/adm")
+//@RequestMapping("/adm")
 public class controllerADM {
 
     @Autowired
     private UserService userService;
 
-    @GetMapping
+    @GetMapping("/adm")
     public String adm() {
 
         return "administradorZur";
