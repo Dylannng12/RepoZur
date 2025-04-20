@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/Zur/consultasEntrante")
-                        .allowedOrigins("https://zurgraphic.com"") // Permite este origen
+                        .allowedOrigins("https://zurgraphic.com") // Permite este origen
                         .allowedMethods("POST") // Métodos permitidos
                         .allowedHeaders("*") // Permite todos los headers
                         .allowCredentials(false);
