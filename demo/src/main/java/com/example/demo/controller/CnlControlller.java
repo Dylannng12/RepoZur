@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-@CrossOrigin(origins = "https://repozur-1.onrender.com/adm?continue")//poner url de la seccion de administrador
+@CrossOrigin(origins = "https://repozur-1.onrender.com/adm")//poner url de la seccion de administrador
 @RestController
 @RequestMapping("/VerConsutlas")
 public class CnlControlller {
