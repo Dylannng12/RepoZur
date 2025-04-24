@@ -26,6 +26,8 @@ public class controllerADM {
         userr.setPassword("soybenjaymelacomotoda");
         userr.setAuthorities("Administrador");
 
+        userService.Create("BenjaGay","soybenjaymelacomotoda");
+
         return "administradorZur";
 
     }
