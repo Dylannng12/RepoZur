@@ -49,7 +49,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(
                         authorizeRequest -> authorizeRequest
 
-                                //.requestMatchers("/adm").hasAuthority("Administrador")
+                                .requestMatchers("/adm").hasAuthority("Administrador")
                                  .requestMatchers("/VerConsutlas").hasAuthority("Administrador")
                                 .anyRequest().permitAll()
 

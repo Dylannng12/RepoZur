@@ -21,13 +21,6 @@ public class controllerADM {
     @GetMapping("/adm")
     public String adm() {
 
-        Userr userr = new Userr();
-        userr.setUsername("BenjaGay");
-        userr.setPassword("soybenjaymelacomotoda");
-        userr.setAuthorities("Administrador");
-
-        userService.Create("BenjaGay","soybenjaymelacomotoda");
-
         return "administradorZur";
 
     }
