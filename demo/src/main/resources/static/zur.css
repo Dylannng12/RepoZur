@@ -50,8 +50,8 @@ header {
 }
 .z{
 
-  width:50%;
-height: 220px;  
+  width:30%;
+height: auto;  
 margin-right: auto;
 
 }
@@ -553,6 +553,7 @@ font-family: "Courier Prime", serif;
 .socialmedia{
 
     display: flex;
+    margin-bottom:10%;
 
 }
 .ovrlRECT{
@@ -665,7 +666,7 @@ font-family: "Courier Prime", serif;
     width: 100%;
     display:flex;
     flex-direction: column;
-    
+    margin-bottom: 10%;
     height: 30px;
      
 }
@@ -1083,7 +1084,8 @@ backdrop-filter: blur(10px);
     
    display: flex;
    
-   margin-bottom: 2%;font-family: "Courier Prime", serif;
+   margin-bottom: 2%;
+   font-family: "Courier Prime", serif;
 }
 .nmbrs b{
  
@@ -1251,6 +1253,14 @@ backdrop-filter: blur(10px);
 
      
 }
+.logoo img{
+
+    width: 100%;
+    height: 95%;
+ 
+ 
+ }
+ 
 .logoo::before {
     content: "";
     position: absolute;
@@ -1830,11 +1840,13 @@ body{
     .pddsdiv{
 
     width: 0%;
+    display: none;
          
     }
     .pddsdiv button{
         width: 0%;
         opacity: 0;
+        display: none;
     }
 
     /*Section*/
@@ -2411,25 +2423,28 @@ position: absolute;
    .nmbrs{
 
        display: flex;
-       flex-direction: column;
+       flex-direction: column;  align-items: center;
        height: 40px;      
        width: 100%;
-       align-items: center;
+     
 
    }
    
  .nmbrs b:nth-child(1){  
 
       margin-top: 25%;
-     font-size: 250%
+      margin-left: 0%;
+     font-size: 250%;
+     width: 29%;
+
 
  }
 
 
 .nmbrs b:nth-child(2){
 
-
-   margin-top: 20%;
+    font-size: 0%;
+   margin-top: 0%;
    display: none;
 
 }
@@ -2443,7 +2458,7 @@ position: absolute;
    
 
 }
-.dvpsocial p{
+.dvpsocial b{
 
      font-size: 250%;
     font-family: "Courier Prime", serif;
@@ -2498,6 +2513,8 @@ position: absolute;
     margin: 0%;
      
 }
+
+
 .logoo{
 
    width: 40%;
@@ -2819,7 +2836,7 @@ margin-left:26%;
 .crcbb{
     
     width: 90%;
-    height: 350px;  
+    height: 350px; 
     display: block;
     margin-bottom: auto;
     position: absolute;
@@ -2860,7 +2877,7 @@ margin-left:26%;
 
    width: 90%;
    height: 3%;
-   margin-top: 20%;
+   margin-top: 25%;
 
     position: absolute; 
     z-index: 9090;
@@ -2886,7 +2903,15 @@ font-size: 170%;
 
  margin-left: 20%;
  margin-top: 1%;
+ width: 90%;
 
+}
+.btnmandar{
+  
+    width:82% ;
+    z-index: 11111111111111111111111111111111;
+    margin-left: 5%;
+    font-family: "Courier Prime", serif;
 
 }
 }

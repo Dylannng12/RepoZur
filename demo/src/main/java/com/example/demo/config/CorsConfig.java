@@ -16,7 +16,7 @@ public class CorsConfig {
                 registry.addMapping("/Zur/consultasEntrante")
                         .allowedOrigins("https://zurgraphic.com") // Permite este origen
                         .allowedMethods("POST") // Métodos permitidos
-                        .allowedHeaders("*") // Permite todos los headers
+                        .allowedHeaders("*")
                         .allowCredentials(false);
             }
         };
